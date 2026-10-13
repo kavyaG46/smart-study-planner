@@ -1,0 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>📚 Study<span>Flow</span></h2>
+        <button id="themeBtn">🌙 Dark Mode</button>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h1>Plan smarter. Study better. ✨</h1>
+                <p>Organize your learning and achieve your goals.</p>
+            </div>
+            <div class="date-box">
+                <p>Today's Date</p>
+                <h3 id="todayDate"></h3>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+        </section>
+
+        <section class="progress-card">
+            <div class="progress-heading">
+                <h3>📈 Your Study Progress</h3>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+
+        <section class="planner">
+
+            <div class="form-card">
+                <h2>➕ Add Study Task</h2>
+
+                <form id="taskForm">
+
+                    <label for="taskName">Task Name</label>
+                    <input
+                        type="text"
+                        id="taskName"
+                        placeholder="e.g. Study JavaScript"
+                        required
+                    >
+
+                    <label for="subject">Subject</label>
+                    <select id="subject" required>
+                        <option value="">Select Subject</option>
+                        <option>HTML & CSS</option>
+                        <option>JavaScript</option>
+                        <option>Python</option>
+                        <option>DBMS</option>
+                        <option>Computer Networks</option>
+                        <option>IoT</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="taskDate">Study Date</label>
+                    <input type="date" id="taskDate" required>
+
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <button type="submit" class="add-btn">
+                        + Add Task
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="tasks-card">
+                <div class="tasks-heading">
+                    <h2>📋 My Study Tasks</h2>
+                    <input
+                        type="search"
+                        id="searchTask"
+                        placeholder="Search tasks..."
+                    >
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Pending">Pending</button>
+                    <button class="filter-btn" data-filter="Completed">Completed</button>
+                </div>
+
+                <div id="taskList">
+                    <div class="empty-state">
+                        <span>📖</span>
+                        <h3>No study tasks yet!</h3>
+                        <p>Add your first task to get started.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for productive students | StudyFlow © 2026</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
